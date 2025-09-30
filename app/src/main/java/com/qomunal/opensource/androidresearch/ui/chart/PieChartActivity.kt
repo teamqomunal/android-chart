@@ -1,7 +1,6 @@
 package com.qomunal.opensource.androidresearch.ui.chart
 
 import android.graphics.Color
-import android.util.Log
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.data.Entry
