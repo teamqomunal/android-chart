@@ -49,9 +49,6 @@ class PieChartActivity : BaseActivity<ActivityPieChartBinding>() {
             isDrawHoleEnabled = false
             setDrawCenterText(false)
 
-            setExtraOffsets(5f, 10f, 5f, 5f)
-            setDragDecelerationFrictionCoef(0.95f)
-
             setRotationAngle(0f)
             // enable rotation of the chart by touch
             isRotationEnabled = true
@@ -76,10 +73,10 @@ class PieChartActivity : BaseActivity<ActivityPieChartBinding>() {
 
             // spin(2000, 0, 360);
             legend.apply {
-                verticalAlignment = Legend.LegendVerticalAlignment.TOP
-                horizontalAlignment = Legend.LegendHorizontalAlignment.RIGHT
-                orientation = Legend.LegendOrientation.VERTICAL
-                setDrawInside(false)
+                verticalAlignment = Legend.LegendVerticalAlignment.BOTTOM
+                horizontalAlignment = Legend.LegendHorizontalAlignment.LEFT
+                orientation = Legend.LegendOrientation.HORIZONTAL
+                setDrawInside(true)
                 xEntrySpace = 7f
                 yEntrySpace = 0f
                 yOffset = 0f
