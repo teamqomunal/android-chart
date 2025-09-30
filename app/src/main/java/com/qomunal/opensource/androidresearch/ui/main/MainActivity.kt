@@ -1,10 +1,12 @@
 package com.qomunal.opensource.androidresearch.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.qomunal.opensource.androidresearch.common.base.BaseActivity
 import com.qomunal.opensource.androidresearch.common.ext.showToast
 import com.qomunal.opensource.androidresearch.databinding.ActivityMainBinding
+import com.qomunal.opensource.androidresearch.ui.chart.PieChartActivity
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
@@ -23,8 +25,12 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun initUI() {
         binding.apply {
-            btnTest.setOnClickListener {
-                showToast("Yes u click on me")
+            btnPieChart.setOnClickListener {
+                startActivity(Intent(this@MainActivity, PieChartActivity::class.java))
+            }
+
+            btnLineChart.setOnClickListener {
+
             }
         }
     }
