@@ -71,7 +71,7 @@ class LineChartActivity : BaseActivity<ActivityLineChartBinding>() {
 
 
             // create marker to display box when values are selected
-            val mv = MyMarkerView(this@LineChartActivity, R.layout.custom_marker_view)
+            val mv = LineChartMarkerView(this@LineChartActivity, R.layout.line_chart_marker_view)
 
             // Set the marker to the chart
             mv.chartView = this

@@ -18,7 +18,7 @@ import com.qomunal.opensource.androidresearch.R
  */
 
 @SuppressLint("ViewConstructor")
-class MyMarkerView(context: Context?, layoutResource: Int) : MarkerView(context, layoutResource) {
+class LineChartMarkerView(context: Context?, layoutResource: Int) : MarkerView(context, layoutResource) {
 
     private val tvContent: TextView = findViewById(R.id.tvContent)
 
