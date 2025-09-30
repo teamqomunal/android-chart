@@ -36,6 +36,10 @@
             android:name=".ui.chart.PieChartActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".ui.chart.LineChartActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

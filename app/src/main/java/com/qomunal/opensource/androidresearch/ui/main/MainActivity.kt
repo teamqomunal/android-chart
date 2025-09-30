@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import com.qomunal.opensource.androidresearch.common.base.BaseActivity
 import com.qomunal.opensource.androidresearch.common.ext.showToast
 import com.qomunal.opensource.androidresearch.databinding.ActivityMainBinding
+import com.qomunal.opensource.androidresearch.ui.chart.LineChartActivity
 import com.qomunal.opensource.androidresearch.ui.chart.PieChartActivity
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
@@ -30,7 +31,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             }
 
             btnLineChart.setOnClickListener {
-
+                startActivity(Intent(this@MainActivity, LineChartActivity::class.java))
             }
         }
     }

@@ -1,5 +1,9 @@
 package com.qomunal.opensource.androidresearch.common.ext
 
+import android.graphics.DashPathEffect
+import com.github.mikephil.charting.data.Entry
+import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.formatter.IFillFormatter
 import com.github.mikephil.charting.utils.ColorTemplate
 
 /**
@@ -30,4 +34,41 @@ fun getTemplateColorChart() : ArrayList<Int?> {
     colors.add(ColorTemplate.getHoloBlue())
 
     return colors
+}
+
+
+fun initLineDataSet(label: String, color: Int, values: ArrayList<Entry?>): LineDataSet {
+    // create a dataset and give it a type
+    return LineDataSet(values, label).apply {
+        setDrawIcons(false)
+
+        // draw dashed line
+        enableDashedLine(10f, 5f, 0f)
+
+        // black lines and points
+        setColor(color)
+        setCircleColor(color)
+
+        // line thickness and point size
+        setLineWidth(3f)
+        circleRadius = 4f
+
+        // draw points as solid circles
+        setDrawCircleHole(false)
+        setDrawValues(false)
+        setDrawFilled(false)
+
+        // customize legend entry
+        formLineWidth = 1f
+        formLineDashEffect = DashPathEffect(floatArrayOf(10f, 5f), 0f)
+        formSize = 15f
+
+        // text size of values
+        valueTextSize = 9f
+        mode = LineDataSet.Mode.CUBIC_BEZIER
+
+        // draw selection line as dashed
+        enableDashedHighlightLine(10f, 5f, 0f)
+    }
+
 }
