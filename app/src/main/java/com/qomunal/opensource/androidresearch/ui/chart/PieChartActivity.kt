@@ -35,13 +35,13 @@ class PieChartActivity : BaseActivity<ActivityPieChartBinding>() {
 
     override fun initUI() {
         title = "PieChartActivity"
-        setupChart()
-        setData(4, 5.toFloat())
+        setupPieChart()
+        setupPieChartData(4, 5.toFloat())
     }
 
     override fun initObserver() {}
 
-    private fun setupChart() {
+    private fun setupPieChart() {
         binding.chart.apply {
 
             setUsePercentValues(true)
@@ -88,7 +88,7 @@ class PieChartActivity : BaseActivity<ActivityPieChartBinding>() {
         }
     }
 
-    private fun setData(count: Int, range: Float) {
+    private fun setupPieChartData(count: Int, range: Float) {
         val entries = ArrayList<PieEntry?>()
         for (i in 0..<count) {
             entries.add(
