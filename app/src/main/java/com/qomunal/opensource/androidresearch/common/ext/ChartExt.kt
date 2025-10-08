@@ -1,9 +1,11 @@
 package com.qomunal.opensource.androidresearch.common.ext
 
+import android.graphics.Color
 import android.graphics.DashPathEffect
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.utils.ColorTemplate
+import androidx.core.graphics.toColorInt
 
 /**
  * Created by faisalamircs on 30/09/2025
@@ -16,10 +18,11 @@ import com.github.mikephil.charting.utils.ColorTemplate
 
 
 fun getTemplateColorChart() : ArrayList<Int?> {
-
     // add a lot of colors
     val colors = ArrayList<Int?>()
-
+    colors.add("#8D1514".toColorInt())
+    colors.add("#008CE3".toColorInt())
+    colors.add("#FBBC05".toColorInt())
     for (c in ColorTemplate.VORDIPLOM_COLORS) colors.add(c)
 
     for (c in ColorTemplate.JOYFUL_COLORS) colors.add(c)
@@ -35,6 +38,14 @@ fun getTemplateColorChart() : ArrayList<Int?> {
     return colors
 }
 
+fun getAppColorChart() : ArrayList<Int?> {
+    // add a lot of colors
+    val colors = ArrayList<Int?>()
+    colors.add("#8D1514".toColorInt())
+    colors.add("#008CE3".toColorInt())
+    colors.add("#FBBC05".toColorInt())
+    return colors
+}
 
 fun initLineDataSet(label: String, color: Int, values: ArrayList<Entry?>): LineDataSet {
     // create a dataset and give it a type

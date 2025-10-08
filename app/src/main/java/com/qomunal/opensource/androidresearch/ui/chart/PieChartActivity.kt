@@ -12,7 +12,7 @@ import com.github.mikephil.charting.highlight.Highlight
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener
 import com.github.mikephil.charting.utils.MPPointF
 import com.qomunal.opensource.androidresearch.common.base.BaseActivity
-import com.qomunal.opensource.androidresearch.common.ext.getTemplateColorChart
+import com.qomunal.opensource.androidresearch.common.ext.getAppColorChart
 import com.qomunal.opensource.androidresearch.databinding.ActivityPieChartBinding
 import timber.log.Timber
 
@@ -104,7 +104,7 @@ class PieChartActivity : BaseActivity<ActivityPieChartBinding>() {
             setSliceSpace(0f)
             setIconsOffset(MPPointF(0f, 40f))
             selectionShift = 5f
-            colors = getTemplateColorChart()
+            colors = getAppColorChart()
         }
 
         val data = PieData(dataSet).apply {
